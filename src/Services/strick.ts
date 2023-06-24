@@ -12,6 +12,7 @@ export const Strick = {
         await client.sendMessage(message.from, media, {
           sendMediaAsSticker: true,
         });
+        
       } catch (e) {
         console.log(e)
         message.reply("❌ Erro ao processar imagem");
