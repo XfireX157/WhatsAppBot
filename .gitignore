@@ -1,7 +1,6 @@
 /dist
 /node_modules
+.env
 /downloaded-media
-
 .wwebjs_cache
 .wwebjs_auth
-.env
