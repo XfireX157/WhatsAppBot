@@ -1,10 +1,9 @@
-import { Client, LocalAuth, Message, MessageMedia } from "whatsapp-web.js";
+import { Client, LocalAuth, Message } from "whatsapp-web.js";
 import { handleMessage } from "./Controller/handleMessage.controller";
 import qrcode from "qrcode-terminal";
 import dotenv from "dotenv";
 import express from "express";
 import bodyParser from "body-parser";
-import { obterTemperatura } from "./api/openWeather";
 
 dotenv.config();
 const app = express();

@@ -3,4 +3,8 @@
 /downloaded-media
 .wwebjs_cache
 .wwebjs_auth
+<<<<<<< HEAD
 .env
+=======
+.env
+>>>>>>> develop
