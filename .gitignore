@@ -4,9 +4,3 @@
 .wwebjs_cache
 .wwebjs_auth
 .env
-
-# managed
-**.data.json
-**.node-persist**
-**_IGNORE_**
-# end managed
