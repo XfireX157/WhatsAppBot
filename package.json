@@ -6,9 +6,8 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/index.ts",
-    "dev": "nodemon src/index.ts",
-    "test": "src/index.ts"
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.ts"
   },
   "dependencies": {
     "@open-wa/wa-automate": "^4.66.3",
