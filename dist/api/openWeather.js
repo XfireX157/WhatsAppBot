@@ -27,3 +27,4 @@ async function obterTemperatura({ city, apiKey, message }) {
     }
 }
 exports.obterTemperatura = obterTemperatura;
+//# sourceMappingURL=openWeather.js.map

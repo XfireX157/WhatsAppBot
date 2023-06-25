@@ -15,3 +15,4 @@ async function menu(message) {
     }
 }
 exports.menu = menu;
+//# sourceMappingURL=menu.js.map

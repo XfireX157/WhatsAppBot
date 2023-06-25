@@ -1,11 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Strick = void 0;
 const whatsapp_web_js_1 = require("whatsapp-web.js");
-const axios_1 = __importDefault(require("axios"));
+const axios_1 = require("axios");
 exports.Strick = {
     async ImageStrick(message, client) {
         if (message.type === "image") {
@@ -36,3 +33,4 @@ exports.Strick = {
         }
     },
 };
+//# sourceMappingURL=strick.js.map

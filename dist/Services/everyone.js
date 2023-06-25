@@ -18,3 +18,4 @@ async function everyoneGrup(message, client) {
     }
 }
 exports.everyoneGrup = everyoneGrup;
+//# sourceMappingURL=everyone.js.map

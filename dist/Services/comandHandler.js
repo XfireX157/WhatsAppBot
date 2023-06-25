@@ -21,19 +21,4 @@ const commandHandlers = {
     },
 };
 exports.default = commandHandlers;
-// "!test": async (message, client) => {
-//   try {
-//     const url = "https://i.imgur.com/r9aU2xv.gif";
-//     const { data: mediaData } = await axios.get(url, {
-//       responseType: "arraybuffer",
-//     });
-//     const buffer = Buffer.from(mediaData, "binary");
-//     const base64Data = buffer.toString("base64");
-//     const media = new MessageMedia("image/gif", base64Data);
-//     client.sendMessage(message.from, media, {
-//       sendVideoAsGif: true
-//     })
-//   } catch (err) {
-//     message.reply("❌ Não foi possível executar o menu");
-//   }
-// },
+//# sourceMappingURL=comandHandler.js.map
