@@ -3,7 +3,6 @@ import { menu } from "./menu";
 import { obterTemperatura } from "../api/openWeather";
 import { everyoneGrup } from "./everyone";
 import { Strick } from "./strick";
-import axios from "axios";
 
 const commandHandlers: {
   [command: string]: (message: Message, client: Client) => Promise<void> | void;
