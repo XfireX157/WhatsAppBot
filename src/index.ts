@@ -1,11 +1,10 @@
-import { Client, LocalAuth, Message } from "whatsapp-web.js";
-import { everyoneGrup } from "./Services/everyone";
-import { Strick } from "./Services/strick";
+import { Client, LocalAuth, Message, MessageMedia } from "whatsapp-web.js";
+import { handleMessage } from "./Controller/handleMessage.controller";
 import qrcode from "qrcode-terminal";
 import dotenv from "dotenv";
-import express, { Request, Response } from "express";
+import express from "express";
 import bodyParser from "body-parser";
-import { handleMessage } from "./Controller/handleMessage.controller";
+import { obterTemperatura } from "./api/openWeather";
 
 dotenv.config();
 const app = express();
@@ -18,7 +17,6 @@ const client = new Client({
   puppeteer: {
     headless: false,
     args: ["--no-sandbox"],
-    executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe"
   },
   authStrategy: new LocalAuth({
     clientId: "YOUR_CLIENT_ID",
@@ -30,7 +28,7 @@ client.on("qr", (qr: string) => {
 });
 
 client.on("message", async (message: Message) => {
-    await handleMessage(message, client)
+  await handleMessage(message, client);
 });
 
 client.on("ready", () => {

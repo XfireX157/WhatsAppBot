@@ -1,10 +1,13 @@
-import { Message, Client, MessageMedia } from "whatsapp-web.js";
+import { Message, Client } from "whatsapp-web.js";
 import { Strick } from "../Services/strick";
 import { everyoneGrup } from "../Services/everyone";
 import { menu } from "../Services/menu";
+import { obterTemperatura } from "../api/openWeather";
 
 export const handleMessage = async (message: Message, client: Client) => {
   const command = message.body.toLowerCase().split(" ")[0];
+  const city = message.body.split("!temperatura")[1];
+  const apiKey = process.env.API_KEY as string;
 
   if (command === "!figurinha" || command.includes("figurinha")) {
     await Strick.ImageStrick(message, client);
@@ -12,16 +15,8 @@ export const handleMessage = async (message: Message, client: Client) => {
   if (command === "!everyone" || command.includes("everyone")) {
     await everyoneGrup(message, client);
   }
-  if (command.includes("video")) {
-    if (message.hasMedia) {
-      const mimeType = await message.downloadMedia();
-      console.log(mimeType);
-      const media = new MessageMedia(mimeType.mimetype, mimeType.data);
-      // const media = new MessageMedia(mimeType, data, fileName);
-      await client.sendMessage(message.from, media, {
-        sendMediaAsSticker: true,
-      });
-    }
+  if (command === "!temperatura" || command.includes("temperatura")) {
+    await obterTemperatura({ city, apiKey, message });
   }
   if (command === "!help") {
     message.reply(menu);
