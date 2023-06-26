@@ -11,7 +11,7 @@ export const Strick = {
         });
       } catch (e) {
         console.log(e);
-        message.reply("❌ Erro ao processar imagem");
+        message.reply("❌ Erro ao processar essa imagem");
       }
     }if(message.type === "image") {
       
