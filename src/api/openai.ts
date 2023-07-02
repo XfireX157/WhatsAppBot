@@ -13,7 +13,7 @@ export async function chatGPT(content: string, message: Message) {
             {
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer ${process.env.OPENAI_KEY}`
+                    Authorization: `Bearer b5c9996bc7b814c00d86ab8d2c7fef2c`
                 }
             }
         )

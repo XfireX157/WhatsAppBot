@@ -5,8 +5,8 @@ import dotenv from "dotenv";
 import express from "express";
 import bodyParser from "body-parser";
 
-dotenv.config();
 const app = express();
+dotenv.config();
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,5 +37,5 @@ client.on("ready", () => {
 client.initialize();
 
 app.listen(process.env.PORT, () => {
-  console.log(`rodando na porta ${process.env.PORT}`);
+  console.log(`rodando na porta ${3004}`);
 });
