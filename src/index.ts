@@ -15,10 +15,9 @@ app.use(bodyParser.json());
 const client = new Client({
   puppeteer: {
     headless: false,
-    args: ["--no-sandbox"],
   },
   authStrategy: new LocalAuth({
-    clientId: "YOUR_CLIENT_ID",
+    clientId: "client-one",
   }),
 });
 
@@ -34,8 +33,7 @@ client.on("ready", () => {
   console.log("Client is ready!");
 });
 
-client.initialize();
-
 app.listen(process.env.PORT, () => {
+  client.initialize();
   console.log(`rodando na porta ${3004}`);
 });
