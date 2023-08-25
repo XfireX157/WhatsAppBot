@@ -33,7 +33,7 @@ client.on("ready", () => {
   console.log("Client is ready!");
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   client.initialize();
   console.log(`rodando na porta ${3004}`);
 });
